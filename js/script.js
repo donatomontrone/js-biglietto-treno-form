@@ -21,19 +21,18 @@ button.addEventListener('click', function() {
     if ((parseInt(inputUserAge.value) > 0) && (parseInt(inputUserAge.value) < 120)){
         if (parseInt(inputUserAge.value) < 18){
             ticketPrice = ticketPrice * 0.825;
-            priceResult.innerHTML = `I km che vorresti percorrere sono ${inputKmetres.value}km e considerando l'età (${inputUserAge.value}), questo è il prezzo del biglietto scontato under 18: ${ticketPrice.toFixed(2)}&euro;`;
+            priceResult.innerHTML = `${inputUserName.value} i km che vorresti percorrere sono ${inputKmetres.value}km e considerando l'età (${inputUserAge.value}), questo è il prezzo del biglietto scontato under 18: ${ticketPrice.toFixed(2)}&euro;`;
             console.log(ticketPrice.toFixed(2))
         } else if (parseInt(inputUserAge.value) >= 65){
             ticketPrice = ticketPrice * 0.667;
-            priceResult.innerHTML = `I km che vorresti percorrere sono ${inputKmetres.value}km e considerando l'età (${inputUserAge.value}), questo è il prezzo del biglietto scontato over 65: ${ticketPrice.toFixed(2)}&euro;`;
+            priceResult.innerHTML = `${inputUserName.value} i km che vorresti percorrere sono ${inputKmetres.value}km e considerando l'età (${inputUserAge.value}), questo è il prezzo del biglietto scontato over 65: ${ticketPrice.toFixed(2)}&euro;`;
             console.log(ticketPrice.toFixed(2))
         } else {
-            priceResult.innerHTML = `I km che vorresti percorrere sono ${inputKmetres.value}km e questo è il prezzo del biglietto: ${ticketPrice.toFixed(2)}&euro;`;
+            priceResult.innerHTML = `${inputUserName.value} i km che vorresti percorrere sono ${inputKmetres.value}km e questo è il prezzo del biglietto: ${ticketPrice.toFixed(2)}&euro;`;
             console.log(ticketPrice.toFixed(2))
         }
     } else {
         alert('L\'età inserita non è corretta')
         priceResult.innerHTML = `Il prezzo del biglietto non può essere calcolato.`;
-
     }
 });
