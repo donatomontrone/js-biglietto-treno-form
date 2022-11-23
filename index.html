@@ -5,22 +5,77 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Train Ticket</title>
+        <!-- Bootstrap v5.2 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
+        <header>
+            <nav class="navbar bg-dark text-center">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./css/img/pngkit_marvel-studios-logo-png_1325022.png" alt="Logo" class="d-inline-block align-text-top w-50">
+                    </a>
+                </div>
+            </nav>
+        </header>
         <main>
-            <h1>Biglietto del treno</h1>
-            <form>
-                <div>                   
-                    <label for="km">Inserisci i km che vorresti percorrere</label>
-                    <input type="number" id="km">
+            <section id="ticket-train">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="pt-4 fw-bold">Benvenuto Avenger</h1>
+                            <p>Inserisci i dati richiesti e scopri il prezzo del biglietto della nuova compagnia aerea targato Marvel Studios.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="form-control">
+                                <div class="mb-3">
+                                    <label for="user-name" class="form-label">Inserisci il tuo Nome e Cognome</label>
+                                    <input type="text" class="form-control" id="user-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="user-age" class="form-label">Inserisci la tua età</label>
+                                    <input type="number" class="form-control" id="user-age">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="user-km" class="form-label">Inserisci i km da percorrere</label>
+                                    <input type="number" class="form-control" id="user-km">
+                                </div>
+                                <button type="button" class="btn btn-danger">Scopri ora</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label for="user-age">Inserisci l'età del passeggero/a</label>
-                    <input type="number" id="user-age">
+        </section>
+        <section class="ticket-print mt-5 pt-5">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-11">
+                        <div class="ticket">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <p class="ps-3 mb-3 fs-4 fw-bolder">Costo biglietto <span class="fw-bolder text-danger"id="ticket-price"></span></p>
+                                    </div>
+                                    <div class="col-6 text-end border-start border-5 border-danger">
+                                        <div class="logo">
+                                            <img src="./css/img/Marvel_Logo.png" alt="Marvel logo" class="w-100">
+                                            <p class="pe-4 fs-4 fw-bold">AirLines</p>
+                                        </div>
+                                        <div class="code-container">
+                                            <img src="https://cdn.asp.events/CLIENT_CL_Conf_BDA05934_5056_B731_4C9EEBBE0C2416C2/sites/TTG-2021/media/article-images/Aztec%20Barcode.png" alt="barcode" class="code w-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button type="button">Scopri il prezzo</button>
-            </form>
-            <h2></h2>
+            </div>
+        </section>
         </main>
         <script type="text/javascript" src="./js/script.js"></script>
     </body>

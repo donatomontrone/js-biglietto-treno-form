@@ -1,0 +1,18 @@
+div.ticket{
+    border: .5px lightgrey solid;
+    border-radius: 35px;
+    width: 100%;
+    background-color: rgba(255, 0, 0, .3);
+}
+
+div.logo {
+    background-color: white;
+    margin-left: 10rem;
+    margin-top: 24px;
+    margin-right: 28px;
+}
+
+div.code-container {
+    margin: 90px 28px 24px 16rem;
+    text-align: center;
+}
